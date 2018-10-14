@@ -1,7 +1,7 @@
 <%@page import="java.util.ArrayList"%>
 <html>
 <head>
-  <title>Kï¿½che</title>
+  <title>Küche</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -26,7 +26,7 @@ if( request.getParameterNames().hasMoreElements() == true ){
 %>
 
 <div class="container">
-<h1>Pizzeria Toskana Kï¿½che</h1>
+<h1>Pizzeria Toskana Küche</h1>
 <br>
 <br>
 
@@ -35,18 +35,18 @@ if( request.getParameterNames().hasMoreElements() == true ){
     <li><a href="alleBestellungen.jsp">Alle Bestellungen</a></li>
     <li><a href="tischBestellungen.jsp">Bestellungen pro Tisch</a></li>
     <li class="active"><a href="rechnungen.jsp">Rechnungen</a></li>
-    <li><a href="loeschen.jsp">Bestellungen lï¿½schen</a></li>
+    <li><a href="loeschen.jsp">Bestellungen löschen</a></li>
 </ul>
 
 <h3>Rechnung</h3>
 <br>
-Neue Rechnung anlegen fï¿½r:
+Neue Rechnung anlegen für:
 <br>
 
 <form method="post"><pre>
 	Tisch-Nummer <input type="number" name="prmID" size=60>
 				 <br>
-	             <input type="submit" name="submit" value="Rechnunge erstellen">
+	             <input type="submit" name="submit" value="Rechnung erstellen">
 </pre></form>
 <br>
 
@@ -84,7 +84,7 @@ Neue Rechnung anlegen fï¿½r:
 		      result = statem.executeQuery( sSql );
 		      
 		      ResultSetMetaData rsmd = result.getMetaData();
-		      int n = rsmd.getColumnCount(); // Lï¿½nge der Spalte
+		      int n = rsmd.getColumnCount(); // Länge der Spalte
 		     
 			  while( result.next() ) {
 			        for( int i=1; i<=n; i++ ){  // Achtung: erste Spalte mit 1 statt 0
@@ -92,17 +92,17 @@ Neue Rechnung anlegen fï¿½r:
 			        }
 			  }
 			  
-			  out.println("<h4>Neue Rechnung fï¿½r Tisch " + tischid + "</h4>");
+			  out.println("<h4>Neue Rechnung für Tisch " + tischid + "</h4>");
 			    
 			  out.println( "<table border=1 cellspacing=0><tr>" );
 			  
-			  // ï¿½berschriften der Tabelle
+			  // Überschriften der Tabelle
 			  for(int j=0; j< ueberschriftArray.length; j++){
 		     	 out.println( "<th>"+ueberschriftArray[j]+"</th>" );
 			  }
 		        
 		      
-		     //Fï¿½r Jede Bestellid -> gib mir Name und Preis der Speise 
+		     //Für Jede Bestellid -> gib mir Name und Preis der Speise 
 			 for(int i=0; i< bestellungen.size(); i++){
 				 int bestellid = bestellungen.get(i);
 				 
@@ -114,7 +114,7 @@ Neue Rechnung anlegen fï¿½r:
 			     result1 = statem1.executeQuery( sSql1 );
 			      
 			     ResultSetMetaData rsmd1 = result1.getMetaData();
-			     int n1 = rsmd1.getColumnCount(); // Lï¿½nge der Spalte
+			     int n1 = rsmd1.getColumnCount(); // Länge der Spalte
 	
 			     while( result1.next() ) {
 				    out.println( "</tr><tr>" );
@@ -127,7 +127,7 @@ Neue Rechnung anlegen fï¿½r:
 			 out.println("</table>");
 					 
 			 
-			//Fï¿½r jede Bestellung -> Gibt mir den Preis um den Rechnungsbetrag zu berechnen.	 
+			//Für jede Bestellung -> Gibt mir den Preis um den Rechnungsbetrag zu berechnen.	 
 			 double preis= 0;
 			 for(int i=0; i< bestellungen.size(); i++){
 				 int bestellid = bestellungen.get(i);
@@ -140,7 +140,7 @@ Neue Rechnung anlegen fï¿½r:
 			     result2 = statem2.executeQuery( sSql2 );
 			      
 			     ResultSetMetaData rsmd2 = result2.getMetaData();
-			     int n2 = rsmd2.getColumnCount(); // Lï¿½nge der Spalte
+			     int n2 = rsmd2.getColumnCount(); // Länge der Spalte
 	
 			     while( result2.next() ) {
 				        for( int l=1; l<=n2; l++ ){  // Achtung: erste Spalte mit 1 statt 0

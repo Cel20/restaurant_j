@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>Kï¿½che</title>
+  <title>Küche</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -28,7 +28,7 @@
   
 %>
 <div class="container">
-<h1>Pizzeria Toskana Kï¿½che</h1>
+<h1>Pizzeria Toskana Küche</h1>
 <br>
 <br>
 
@@ -37,10 +37,10 @@
     <li ><a href="alleBestellungen.jsp">Alle Bestellungen</a></li>
     <li class="active"><a href="tischBestellungen.jsp">Bestellungen pro Tisch</a></li>
     <li><a href="rechnungen.jsp">Rechnungen</a></li>
-    <li><a href="loeschen.jsp">Bestellungen lï¿½schen</a></li>
+    <li><a href="loeschen.jsp">Bestellungen löschen</a></li>
   </ul>
 
-<h3>Bestellungen fï¿½r Tisch anzeigen</h3>
+<h3>Bestellungen für Tisch anzeigen</h3>
 
 
 <form method="post"><pre>
@@ -71,7 +71,7 @@
 	      result = statem.executeQuery( sSql );
 	      
 	      ResultSetMetaData rsmd = result.getMetaData();
-	      int n = rsmd.getColumnCount(); // Lï¿½nge der Spalte
+	      int n = rsmd.getColumnCount(); // Länge der Spalte
 	      
 	      out.println( "<table border=1 cellspacing=0><tr>" );
 	      for( int i=0; i<n; i++ )   
