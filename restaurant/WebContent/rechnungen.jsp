@@ -106,7 +106,7 @@ Neue Rechnung anlegen für:
 			 for(int i=0; i< bestellungen.size(); i++){
 				 int bestellid = bestellungen.get(i);
 				 
-				 String sSql1 = "SELECT speisen.name, speisen.preis FROM bestellung INNER JOIN speisen ON bestellung.id = speisen.id WHERE bestellung.id=";
+				 String sSql1 = "SELECT speisen.name, speisen.preis FROM bestellung INNER JOIN speisen ON bestellung.speisenid = speisen.id WHERE bestellung.id=";
 				 sSql1 += bestellid;
 				
 				 statem1 = conn.createStatement();
@@ -132,7 +132,7 @@ Neue Rechnung anlegen für:
 			 for(int i=0; i< bestellungen.size(); i++){
 				 int bestellid = bestellungen.get(i);
 				 
-				 String sSql2 = "SELECT speisen.preis FROM bestellung INNER JOIN speisen ON bestellung.id = speisen.id WHERE bestellung.id=";
+				 String sSql2 = "SELECT speisen.preis FROM bestellung INNER JOIN speisen ON bestellung.speisenid = speisen.id WHERE bestellung.id=";
 				 sSql2 += bestellid;
 				
 				 statem2 = conn.createStatement();
